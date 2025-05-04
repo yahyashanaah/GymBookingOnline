@@ -1,0 +1,61 @@
+
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+
+## Rider
+.idea/
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.*.json
+secrets.json
+
+## Log files
+*.log
+
+## NuGet
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Others
+*.db
+*.sqlite
+*.pdb
+*.cache
+*.tmp
+*.bak
+
+# dotCover
+.idea/.dotCover
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Docker
+**/docker-compose.override.yml
+.env
+
+# Global JetBrains IDEs settings folder
+.jb/
+
+# Local tools
+.localtools/
+
+# Test results
+TestResults/
