@@ -54,8 +54,12 @@ namespace GymBooking.API.Controllers
         {
             try
             {
-                var createdBooking = await _bookingRepo.CreateAsync(booking);
-                return CreatedAtAction(nameof(Get), new { id = createdBooking.Id }, createdBooking);
+               if(ModelState.IsValid)
+                {
+                    var createdBooking = await _bookingRepo.CreateAsync(booking);
+                    return CreatedAtAction(nameof(Get), new { id = createdBooking.Id }, createdBooking);
+                }
+                return BadRequest(ModelState);
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
 using GymBooking.API.Models;
+using GymBooking.API.Services;
 using GymBooking.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,13 +11,15 @@ namespace GymBooking.API.Controllers
     {
         private readonly IUserRepository _userRepo;
         private readonly ILogger<UsersController> _logger;
+        private readonly TokenService _tokenService;
 
-        public UsersController(IUserRepository userRepo, ILogger<UsersController> logger)
+        public UsersController(IUserRepository userRepo, ILogger<UsersController> logger, TokenService tokenService)
         {
+            _tokenService = tokenService;
             _logger = logger;
             _userRepo = userRepo;
         }
-
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetAll()
         {
@@ -49,7 +52,7 @@ namespace GymBooking.API.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<ActionResult<User>> Create(User user)
         {
             try
