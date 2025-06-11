@@ -1,8 +1,10 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymBooking.API", "GymBooking.API.csproj", "{EB5E39B5-ACC0-EB7B-F111-0993006586B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymBooking.Tests", "GymBooking.Tests\GymBooking.Tests.csproj", "{BBDDF044-6FEB-4B5A-A02F-EBEFE579A71A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +16,10 @@ Global
 		{EB5E39B5-ACC0-EB7B-F111-0993006586B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB5E39B5-ACC0-EB7B-F111-0993006586B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB5E39B5-ACC0-EB7B-F111-0993006586B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDDF044-6FEB-4B5A-A02F-EBEFE579A71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDDF044-6FEB-4B5A-A02F-EBEFE579A71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDDF044-6FEB-4B5A-A02F-EBEFE579A71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDDF044-6FEB-4B5A-A02F-EBEFE579A71A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

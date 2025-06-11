@@ -8,16 +8,24 @@ namespace GymBooking.API.Services.Repositories
     public class SessionRepository : ISessionRepository
     {
         private readonly AppDbContext _context;
-        
-
         public SessionRepository(AppDbContext context)
         {
             _context = context;
         }
 
+        public async Task AddSessionAsync(Session session)
+        {
+            _context.Sessions.Add(session);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<List<Session>> GetAllSessionsAsync()
+        {
+            return await _context.Sessions.ToListAsync();
+        }
+        
         public async Task<IEnumerable<Session>> GetAllAsync()
         {
-          try
+            try
             {
                 return await _context.Sessions
                     .Include(s => s.Trainer)
